@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import logo from './tastyfood.png';
 import cart from './cartlogo.png';
+import dishpic from'./vegpulao.jpg';
 
 const HeadingComponent = () => {
     return(
@@ -20,12 +21,57 @@ const HeadingComponent = () => {
     </div>
 )
 };
+const RestroCard = () => {
+    return(
+        <div className='restcard'>
+            <img id="dishpicture"src={dishpic}></img>
+            <div className='restdetails'>
+                <div><strong>Restaurant Name</strong></div>
+                <div>Dish_Name,Cuisine</div>
+                <div>Ratings</div>
+            </div>
+        </div>
+    )
+};
 const BodyComponent =() =>{
     return(
     <div className="bodycomp">
-        <button id="srcbtn">
-            Search
-    </button>
+        <div>
+            <button id="srcbtn">
+                Search
+            </button>
+        </div>
+        <div className='rest_container'>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            
+
+        </div>
+        
+    </div>
+    
+)};
+const FooterComponent = () => {
+    return(
+    <div className="footcomp">
+        <ul>
+            <li>©️Copy Right 2024<li>All Rights Reserved</li></li>
+            <li>Made with ❤️ in India</li>
+            <li>Contact Us<li>Bhubanewar</li></li>
+        </ul>
     </div>
 )};
 
@@ -37,16 +83,7 @@ const AppLayout =() =>{
         <FooterComponent/>
     </div>
 )};
-const FooterComponent = () => {
-    return(
-    <div id="footcomp">
-        <li>
-            Copy Right
-            Made with ❤️ in India
-            All Rights Reserved
-        </li>
-    </div>
-)};
+
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
