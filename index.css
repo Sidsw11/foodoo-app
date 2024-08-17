@@ -1,0 +1,27 @@
+
+
+#srcbtn{
+    border: solid 2px;
+}
+.bodycomp{
+    background-color: blue;
+}
+#logo{
+    height: 75px;
+    width: 75px;
+}
+#cartlogo{
+    width: 20px;
+}
+.nav-items >ul {
+    display: flex; 
+}
+.nav-items > ul >li{
+    list-style: none;
+    padding:20px;
+}
+.headcomp{
+    display: flex; 
+    justify-content: space-between;
+}
+
