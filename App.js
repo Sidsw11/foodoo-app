@@ -21,15 +21,15 @@ const HeadingComponent = () => {
     </div>
 )
 };
-const RestroCard = (props) => {
+const RestroCard = ({restaurantName, cuisine, dishName, ratings, deliverytime}) => {
     return(
         <div className='restcard'>
             <img id="dishpicture"src={dishpic}></img>
             <div className='restdetails'>
-                <div><strong>{props.restaurantName}</strong></div>
-                <div>{props.dishName},{props.cuisine}</div>
-                <div>{props.ratings}</div>
-                <div>{props.deliverytime}</div>
+                <div><strong>{restaurantName}</strong></div>
+                <div>{dishName},{cuisine}</div>
+                <div>{ratings}</div>
+                <div>{deliverytime}</div>
             </div>
         </div>
     )
