@@ -51,10 +51,16 @@
     list-style-type: none;
 }
 .restcard{
-    border: solid black;
+    border: 0.5px solid rgb(186, 171, 155);
+    
     margin: 20px;
     width: 150px;
-    height: 220px;
+}
+.restcard:hover{
+    transition:0.7s;
+    border: 0.5px solid rgb(22, 22, 22);
+    cursor: pointer;
+    
 }
 .restdetails{
     padding: 2px;

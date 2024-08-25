@@ -21,14 +21,15 @@ const HeadingComponent = () => {
     </div>
 )
 };
-const RestroCard = () => {
+const RestroCard = (props) => {
     return(
         <div className='restcard'>
             <img id="dishpicture"src={dishpic}></img>
             <div className='restdetails'>
-                <div><strong>Restaurant Name</strong></div>
-                <div>Dish_Name,Cuisine</div>
-                <div>Ratings</div>
+                <div><strong>{props.restaurantName}</strong></div>
+                <div>{props.dishName},{props.cuisine}</div>
+                <div>{props.ratings}</div>
+                <div>{props.deliverytime}</div>
             </div>
         </div>
     )
@@ -42,8 +43,8 @@ const BodyComponent =() =>{
             </button>
         </div>
         <div className='rest_container'>
-            <RestroCard/>
-            <RestroCard/>
+            <RestroCard restaurantName="Hotel Truptee" dishName="Veg pulao" cuisine="Indian" ratings="4.3⭐" deliverytime="20 minutes" />
+            <RestroCard restaurantName="Sri Rama Hotel" dishName="Veg Fried Rice" cuisine="Asian" ratings="4.0⭐" deliverytime="30 minutes"/>
             <RestroCard/>
             <RestroCard/>
             <RestroCard/>
