@@ -40,7 +40,7 @@
     
 }
 .footcomp{
-    height:min-content;
+    height:10px;
 }
 .footcomp >ul{
     background-color:bisque;
@@ -57,11 +57,12 @@
     border: 0.5px solid rgb(186, 171, 155);
     
     margin: 20px;
-    width: 150px;
+    padding:5px;
+    width: 150px;       
 }
 .restcard:hover{
     transition:0.7s;
-    border: 0.5px solid rgb(22, 22, 22);
+    border: 0.5px solid rgb(169, 7, 7);
     cursor: pointer;
     
 }
@@ -75,4 +76,8 @@
     margin: 5px;
     width: 140px;
     height: 110px;
+}
+.restdetails{
+
+    margin:10px;
 }
