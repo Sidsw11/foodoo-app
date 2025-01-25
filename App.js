@@ -47,6 +47,14 @@ const BodyComponent =() =>{
             <RestroCard restaurantName="Sri Rama Hotel" dishName="Veg Fried Rice" cuisine="Asian" ratings="4.0⭐" deliverytime="30 minutes"/>
             <RestroCard/>
             <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
+            <RestroCard/>
             
           
             
