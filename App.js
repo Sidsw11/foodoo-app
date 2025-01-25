@@ -47,17 +47,8 @@ const BodyComponent =() =>{
             <RestroCard restaurantName="Sri Rama Hotel" dishName="Veg Fried Rice" cuisine="Asian" ratings="4.0⭐" deliverytime="30 minutes"/>
             <RestroCard/>
             <RestroCard/>
-            <RestroCard/>
-            <RestroCard/>
-            <RestroCard/>
-            <RestroCard/>
-            <RestroCard/>
-            <RestroCard/>
-            <RestroCard/>
-            <RestroCard/>
-            <RestroCard/>
-            <RestroCard/>
-            <RestroCard/>
+            
+          
             
 
         </div>
@@ -71,7 +62,7 @@ const FooterComponent = () => {
         <ul>
             <li>©️Copy Right 2024<li>All Rights Reserved</li></li>
             <li>Made with ❤️ in India</li>
-            <li>Contact Us<li>Bhubanewar</li></li>
+            <li>Contact Us<li>Sri Jagannath Puri</li></li>
         </ul>
     </div>
 )};
