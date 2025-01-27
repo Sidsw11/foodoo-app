@@ -15,7 +15,7 @@ const HeadingComponent = () => {
           <li>Home</li>
           <li>Contact Us</li>
           <li>
-            My Cart<img id="cartlogo" src={cart}></img>
+            My Cart
           </li>
         </ul>
       </div>
@@ -672,7 +672,8 @@ const restList = [
 ];
 
 const RestroCard = ({ restData }) => {
-  const { name, cuisines, avgRating, costForTwo,cloudinaryImageId } = restData?.info;
+  const { name, cuisines, avgRating, costForTwo, cloudinaryImageId } =
+    restData?.info;
   return (
     <div className="restcard">
       <img
@@ -686,8 +687,8 @@ const RestroCard = ({ restData }) => {
         <div>
           <strong>{name}</strong>
         </div>
-        <div>{avgRating + "⭐"+"."+restData?.info?.sla?.slaString}</div>
-        <div >{cuisines.join(", ")}</div>
+        <div>{avgRating + "⭐" + "." + restData?.info?.sla?.slaString}</div>
+        <div>{cuisines.join(", ")}</div>
         <div>{costForTwo}</div>
         <div>{}</div>
       </div>
@@ -702,21 +703,7 @@ const BodyComponent = () => {
       </div>
       <div className="rest_container">
         <RestroCard restData={restList[0]} />
-        <RestroCard restData={restList[1]} />
-        <RestroCard restData={restList[2]} />
-        <RestroCard restData={restList[3]} />
-        <RestroCard restData={restList[4]} />
-        <RestroCard restData={restList[5]} />
-        <RestroCard restData={restList[6]} />
-        <RestroCard restData={restList[7]} />
-        <RestroCard restData={restList[0]} />
-        <RestroCard restData={restList[1]} />
-        <RestroCard restData={restList[2]} />
-        <RestroCard restData={restList[3]} />
-        <RestroCard restData={restList[4]} />
-        <RestroCard restData={restList[5]} />
-        <RestroCard restData={restList[6]} />
-        <RestroCard restData={restList[7]} />
+        
       </div>
     </div>
   );

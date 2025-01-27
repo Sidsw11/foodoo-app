@@ -16,10 +16,7 @@
   width: 70px;
   border-radius: 50%;
 }
-#cartlogo {
-  width: 22px;
-  border-radius: 50%;
-}
+
 .nav-items > ul {
   display: flex;
 }
