@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import logo from "./tastyfood.png";
-import cart from "./cartlogo.png";
+
 import dishpic from "./vegpulao.jpg";
 
 const HeadingComponent = () => {
@@ -702,7 +702,7 @@ const BodyComponent = () => {
         <button id="srcbtn">Search</button>
       </div>
       <div className="rest_container">
-        <RestroCard restData={restList[0]} />
+        {restList.map((info)=> (<RestroCard restData={info}/>))}
         
       </div>
     </div>
