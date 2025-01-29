@@ -1,6 +1,7 @@
 import RestroCard from "./RestroCard.js";
 import restList from "../utils/mockData.js";
 import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer.js"
 const BodyComponent = () => {
   const [restaurantList, setrestaurantList] = useState([]);
   useEffect(() => {
@@ -16,7 +17,11 @@ const BodyComponent = () => {
     setrestaurantList(
       json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );
+    
   };
+  if (restaurantList.length === 0) {
+    return <Shimmer></Shimmer>;
+  }
   return (
     <div className="bodycomp">
       <div>

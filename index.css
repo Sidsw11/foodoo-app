@@ -50,7 +50,7 @@
   border: 0.5px solid rgb(186, 171, 155);
   margin: 25px;
   padding: 2;
-  width: 175px;
+  width: 190px;
 }
 .restcard:hover {
   transition: 0.7s;
@@ -61,12 +61,28 @@
   padding: 5px;
   margin-top: 10px;
 }
-.cuisine {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 
 #dishpicture {
-  width: 175px;
+  width: 190px;
+  height: 140px;
+}
+.shimmer-container{
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.shimmer-cards{
+  width: 190px;
+  height:280px;
+  margin:25px;
+  padding:2;
+  background-color: #f0f0f0;  
+}
+.shimmerdish-pic{
+  
+  width: 190px;
   height: 130px;
+  background-color: rgb(214, 207, 207);
 }
