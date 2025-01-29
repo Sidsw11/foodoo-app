@@ -5,7 +5,7 @@
 }
 .bodycomp {
   background-color: rgb(196, 211, 206);
-  
+
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .rest_container {
@@ -62,27 +62,29 @@
   margin-top: 10px;
 }
 
-
 #dishpicture {
   width: 190px;
   height: 140px;
 }
-.shimmer-container{
-  margin-top: 70px;
+.shimmer-container {
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
 }
-.shimmer-cards{
+.shimmer-cards {
   width: 190px;
-  height:280px;
-  margin:25px;
-  padding:2;
-  background-color: #f0f0f0;  
+  height: 280px;
+  margin: 25px;
+  padding: 2;
+  background-color: #f0f0f0;
 }
-.shimmerdish-pic{
-  
+.shimmerdish-pic {
   width: 190px;
   height: 130px;
   background-color: rgb(214, 207, 207);
+}
+.login-btn {
+  background-color: rgb(124, 126, 237);
+  margin: 0 20;
 }

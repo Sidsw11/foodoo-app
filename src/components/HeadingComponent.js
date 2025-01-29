@@ -1,5 +1,7 @@
+import { useState } from "react";
 import logo from "../tastyfood.png";
 const HeadingComponent = () => {
+  const [btnName, setbtnName] = useState("Login");
   return (
     <div className="headcomp">
       <div>
@@ -10,6 +12,16 @@ const HeadingComponent = () => {
           <li>Home</li>
           <li>Contact Us</li>
           <li>My Cart</li>
+          <button
+            className="login-btn"
+            onClick={() => {
+
+              btnName ==="Login"? setbtnName("Logout")
+              :setbtnName("Login");
+            }}
+          >
+            {btnName}
+          </button>
         </ul>
       </div>
     </div>
