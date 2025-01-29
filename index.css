@@ -1,5 +1,7 @@
-#srcbtn {
+.filter {
+  margin:10px;
   border: solid 2px;
+  border-radius: 5;
 }
 .bodycomp {
   background-color: rgb(196, 211, 206);

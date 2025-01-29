@@ -16,7 +16,7 @@ const RestroCard = ({ restData }) => {
         <div>
           <strong>{name}</strong>
         </div>
-        <div>{avgRating + "⭐" + "." + restData?.info?.sla?.slaString}</div>
+        <div><strong>{avgRating + "⭐ " + ". " + restData?.info?.sla?.slaString}</strong></div>
         <div>{cuisines.join(", ")}</div>
         <div>{costForTwo}</div>
       </div>
