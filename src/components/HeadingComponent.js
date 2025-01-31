@@ -11,13 +11,12 @@ const HeadingComponent = () => {
         <ul>
           <li>Home</li>
           <li>Contact Us</li>
+          <li>About Us</li>
           <li>My Cart</li>
           <button
             className="login-btn"
             onClick={() => {
-
-              btnName ==="Login"? setbtnName("Logout")
-              :setbtnName("Login");
+              btnName === "Login" ? setbtnName("Logout") : setbtnName("Login");
             }}
           >
             {btnName}
