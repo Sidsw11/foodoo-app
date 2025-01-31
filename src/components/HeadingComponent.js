@@ -11,7 +11,9 @@ const HeadingComponent = () => {
         <ul>
           <li>Home</li>
           <li>Contact Us</li>
-          <li>About Us</li>
+          <li>
+            <a href="/about">About Us </a>
+          </li>
           <li>My Cart</li>
           <button
             className="login-btn"
