@@ -2,10 +2,11 @@ import RestroCard from "./RestroCard.js";
 import restList from "../utils/mockData.js";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
+import RestroMenu from "./RestroMenu.js";
 const BodyComponent = () => {
   const [restaurantList, setrestaurantList] = useState([]);
   const [searchText, setSearchText] = useState();
-  const [searchedList,setSearchedList]=useState();
+  const [searchedList, setSearchedList] = useState();
   useEffect(() => {
     fetchData();
   }, []);
@@ -42,8 +43,9 @@ const BodyComponent = () => {
             onClick={() => {
               console.log(searchText);
               const searchRestaurantList = restaurantList.filter((res) =>
-                res.info?.name.toLowerCase().includes(searchText.toLowerCase()));
-              
+                res.info?.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+
               setSearchedList(searchRestaurantList);
             }}
           >
@@ -73,7 +75,9 @@ const BodyComponent = () => {
       </div>
       <div className="rest_container">
         {searchedList.map((restu) => (
-          <RestroCard key={restu?.info?.id} restData={restu} />
+          
+            <RestroCard key={restu?.info?.id}restData={restu} />
+          
         ))}
       </div>
     </div>

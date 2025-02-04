@@ -3,7 +3,7 @@ const FooterComponent = () => {
     <div className="footcomp">
       <ul>
         <li>
-          ©️Copy Right 2024<li>All Rights Reserved</li>
+          ©️Copy Right 2025<li>All Rights Reserved</li>
         </li>
         <li>Made with ❤️ in India</li>
         <li>
