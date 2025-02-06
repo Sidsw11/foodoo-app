@@ -2,7 +2,7 @@ import RestroCard from "./RestroCard.js";
 import restList from "../utils/mockData.js";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
-import RestroMenu from "./RestroMenu.js";
+import { Link } from "react-router-dom";
 const BodyComponent = () => {
   const [restaurantList, setrestaurantList] = useState([]);
   const [searchText, setSearchText] = useState();
@@ -76,7 +76,7 @@ const BodyComponent = () => {
       <div className="rest_container">
         {searchedList.map((restu) => (
           
-            <RestroCard key={restu?.info?.id}restData={restu} />
+            <Link key={restu?.info?.id} to={"restaurant/"+restu?.info?.id}><RestroCard restData={restu} /></Link>
           
         ))}
       </div>
