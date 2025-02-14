@@ -1,36 +1,40 @@
-import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer.js";
 import { useParams } from "react-router-dom";
 import { MENU_API } from "../utils/constants.js";
+import useRestaurantMenu from "../utils/useRestaurantMenu.js";
+import useMenuItems from "../utils/useMenuItems.js";
 
 const RestroMenu = () => {
-  const [resMenu, setResMenu] = useState(null);
-  const [menuItems, setMenuItems] = useState(null);
+  // const [resMenu, setResMenu] = useState(null);
+  //const [menuItems, setMenuItems] = useState(null);
   const { resId } = useParams();
 
-  useEffect(() => {
-    fetchMenu();
-  }, []);
+  const resMenu = useRestaurantMenu(resId);
+  const menuItems= useMenuItems(resId);
 
-  const fetchMenu = async () => {
-    const data = await fetch(MENU_API + resId);
-    const json = await data.json();
-    //console.log(json);
-    setResMenu(json.data?.cards[2]?.card?.card?.info);
-    console.log("RestMenu");
-    console.log(json);
-    setMenuItems(
-      json.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
-        ?.card?.itemCards
-    );
-    console.log("MenuItems");
-    console.log(
-      json.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
-        ?.card?.itemCards
-    );
-  };
+  // useEffect(() => {
+  //   fetchMenu();
+  // }, []);
 
-  if (resMenu === null) return <Shimmer />;
+  // const fetchMenu = async () => {
+  //   const data = await fetch(MENU_API + resId);
+  //   const json = await data.json();
+  //   //console.log(json);
+  //   setResMenu(json.data?.cards[2]?.card?.card?.info);
+  //   console.log("RestMenu");
+  //   console.log(json);
+  //   setMenuItems(
+  //     json.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+  //       ?.card?.itemCards
+  //   );
+  //   console.log("MenuItems");
+  //   console.log(
+  //     json.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+  //       ?.card?.itemCards
+  //   );
+  // };
+
+  if (resMenu === null || menuItems === null ) return <Shimmer />;
 
   const { name, avgRating, cuisines } = resMenu;
   console.log("qwe ", cuisines);
