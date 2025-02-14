@@ -3,6 +3,7 @@ import restList from "../utils/mockData.js";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer.js";
 import { Link } from "react-router-dom";
+import { REST_API } from "../utils/constants.js";
 const BodyComponent = () => {
   const [restaurantList, setrestaurantList] = useState([]);
   const [searchText, setSearchText] = useState();
@@ -11,9 +12,7 @@ const BodyComponent = () => {
     fetchData();
   }, []);
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.8134554&lng=85.8312359&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    const data = await fetch(REST_API);
 
     const json = await data.json();
     console.log(json);
@@ -75,9 +74,9 @@ const BodyComponent = () => {
       </div>
       <div className="rest_container">
         {searchedList.map((restu) => (
-          
-            <Link key={restu?.info?.id} to={"restaurant/"+restu?.info?.id}><RestroCard restData={restu} /></Link>
-          
+          <Link key={restu?.info?.id} to={"restaurant/" + restu?.info?.id}>
+            <RestroCard restData={restu} />
+          </Link>
         ))}
       </div>
     </div>
