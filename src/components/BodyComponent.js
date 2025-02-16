@@ -5,25 +5,29 @@ import Shimmer from "./Shimmer.js";
 import { Link } from "react-router-dom";
 import { REST_API } from "../utils/constants.js";
 import useOnlineStatus from "../utils/useOnlineStatus.js";
+import useRestaurantList from "../utils/useRestaurantList.js";
+import useSearchedList from "../utils/useSearchedList.js";
 const BodyComponent = () => {
-  const [restaurantList, setrestaurantList] = useState([]);
+ // const [restaurantList, setrestaurantList] = useState([]);
   const [searchText, setSearchText] = useState();
-  const [searchedList, setSearchedList] = useState();
-  useEffect(() => {
-    fetchData();
-  }, []);
-  const fetchData = async () => {
-    const data = await fetch(REST_API);
+ // const [searchedList, setSearchedList] = useState();
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+  // const fetchData = async () => {
+  //   const data = await fetch(REST_API);
 
-    const json = await data.json();
-    console.log(json);
-    setrestaurantList(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    setSearchedList(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-  };
+  //   const json = await data.json();
+  //   console.log(json);
+  //   setrestaurantList(
+  //     json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  //   );
+  //   setSearchedList(
+  //     json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  //   );
+  // };
+  const restaurantList = useRestaurantList();
+  const searchedList = useSearchedList();
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false) {
     return (
@@ -34,7 +38,7 @@ const BodyComponent = () => {
     );
   }
 
-  return restaurantList.length === 0 ? (
+  return (restaurantList.length === 0 || searchedList.length === 0) ? (
     <Shimmer />
   ) : (
     <div className="bodycomp">
@@ -44,6 +48,7 @@ const BodyComponent = () => {
             type="text"
             className="Search-text-box"
             value={searchText}
+            
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
